@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=devices-width, initial-scale=1.0">
     <title>TY project ecommerce website design</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,13 +14,12 @@
   <body>
 
 
-  <div class="header">
     <div class="navbar">
       <div class="logo">
         <img src="images/logo.png" width="125px">
       </div>
       <nav>
-        <ul>
+        <ul id="MenuItems">
           <li><a href="">Home</a></li>
           <li><a href="">Products</a></li>
           <li><a href="">About</a></li>
@@ -31,8 +31,12 @@
 
       <a href="#" class="cartimg">
       <img src="images/cart.png" width="30px" height="30px">
+      <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
       </a>
     </div>
+
+  <div class="header">
+  <div class="big-container">
   <div class="container">
     <div class="row">
       <div class="col-2">
@@ -43,23 +47,26 @@
       <div class="col-2">
         <img src="images/BigImageOnHomePage.png" >
       </div>
-
+      </div>
     </div>
   </div>
   </div>
 
 <!------categories------->
 <div class="categories">
+  <div class="sec-title"><h2>Top Categories</h2></div>
+  <div class="big-container">
   <div class="small-container">
-    <div class="sec-title"><h2>Top Categories</h2></div>
       <div class="row">
-        <div class="col-3"> <img src="images/category-1.png" class="image"> <h4>pc/laptop</h4> </div>
-        <div class="col-3"> <img src="images/category-2.png" class="image"> <h4>console</h4> </div>
-        <div class="col-3"> <img src="images/category-3.png" class="image"> <h4>smart phone</h4> </div>
+        <div class="col-3"> <img src="images/category-1.png" class="image"> <h4>PC/Laptop</h4> </div>
+        <div class="col-3"> <img src="images/category-2.png" class="image"> <h4>Console</h4> </div>
+        <div class="col-3"> <img src="images/category-3.png" class="image"> <h4>Smart phone</h4> </div>
     </div>
+  </div>
   </div>
 </div>
 <!------Products------->
+<div class="big-container">
 <div class="small-container">
   <div class="sec-title"><h2>Featured Products</h2></div>
   <div class="row">
@@ -79,7 +86,71 @@
         <p>₹1,59,900</p>
     </div>
   </div>
-
+  </div>
 </div>
+<!------Featured------>
+<div class="Featured">
+  <div class="big-container">
+  <div class="small-container">
+    <div class="row">
+      <div class="col-2">
+        <img src="images/Featured.png" class="Featured-img">
+      </div>
+      <div class="col-2">
+        <p>Sounds like an epiphany</p>
+        <h1>Apple AirPods Max</h1>
+        <small>a perfect balance of exhilarating high-fidelity<br>audio and the effortless magic of AirPods.<br>The ultimate personal listening experience is here.<br></small>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<!------Brands------>
+<div class="Brands">
+  <div class="small-container">
+    <div class="row">
+      <div class="col-5">
+        <img src="images/logo-sony.png">
+      </div>
+      <div class="col-5">
+        <img src="images/logo-microsoft.png">
+      </div>
+      <div class="col-5">
+        <img src="images/logo-apple.png">
+      </div>
+      <div class="col-5">
+        <img src="images/logo-mi.png">
+      </div>
+      <div class="col-5">
+        <img src="images/logo-dell.png">
+      </div>
+    </div>
+  </div>
+</div>
+<!-----footer----->
+<div class="footer">
+
+  <div class="container">
+    <div class="row">
+      <h4>we need to add footer here</h4>
+    </div>
+
+  </div>
+</div>
+<script>
+  var MenuItems = document.getElementById("MenuItems");
+
+  MenuItems.style.maxHeight = "0px";
+
+  function menutoggle(){
+    if (MenuItems.style.maxHeight == "0px") {
+      MenuItems.style.maxHeight = "200px";
+    }
+    else {
+      MenuItems.style.maxHeight = "0px";
+    }
+  }
+</script>
   </body>
 </html>
